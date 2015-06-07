@@ -34,6 +34,14 @@ for (idx,val) in days.iteritems():
 	print 'text id:', idx, ' val:',val
 
 
+# dic key
+
+if "sunday" in days:
+	print 'sunday is in list'
+elif 'monday' in days:
+	print 'sunday is not in list, but monday is'
+
+
 # merge list
 
 listone = [1,3,5]
