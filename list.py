@@ -27,6 +27,18 @@ for color in colors:
 for idx, val in enumerate(colors):
 	print 'num id:', idx, ' val:',val
 
+#array append
+
+lst = ["la"]
+lst.append("lo")
+print len(lst)
+
+# dic creation
+dic = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};
+dic['Age'] = 8; # update existing entry
+dic['School'] = "DPS School"; # Add new entry
+
+
 
 # dic for
 
@@ -60,4 +72,10 @@ t = [1, 2, 3, 1, 2, 5, 6, 7, 8]
 s = [1, 2, 3]
 difflist = list(set(t) - set(s))
 print difflist
+
+# continue
+for letter in 'Python':     # First Example
+   if letter == 'h':
+      continue
+   print 'Current Letter :', letter
 
