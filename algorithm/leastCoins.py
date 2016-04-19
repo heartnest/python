@@ -1,3 +1,6 @@
+""" playground dynamic programming, coin making problem """
+""" ref: https://en.wikipedia.org/wiki/Change-making_problem """
+
 import glob
 import sys
 import math
@@ -19,7 +22,8 @@ def _get_change_making_matrix(V, S):
 	m = [[0 for _ in range(S + 1)] for _ in range(len(V) + 1)]
 	
 	for i in range(S + 1):
-		m[0][i] = i
+		m[0][i] =  float("inf") #c orrect version
+		# m[0][i] =  i # illustration purpose
 	print m
 	return m
   
@@ -34,27 +38,21 @@ def change_making(V, S):
 	for c in range(1, len(V) + 1):
 		for r in range(1, S + 1):
 
-			# Just use the coin coins[c - 1].
+			# Just use the coin V[c - 1].
 			if V[c - 1] == r:
 				m[c][r] = 1
 
-
-
-
-            # coins[c - 1] cannot be included.
+            # V[c - 1] cannot be included.
             # We use the previous solution for making r,
-            # excluding coins[c - 1].
+            # excluding V[c - 1].
             
 			elif V[c - 1] > r:
 				m[c][r] = m[c - 1][r]
 
-
-
-
-            # We can use coins[c - 1].
+            # We can use V[c - 1].
              # We need to decide which one of the following solutions is the best:
-             # 1. Using the previous solution for making r (without using coins[c - 1]).
-             # 2. Using the previous solution for making r - coins[c - 1] (without using coins[c - 1])
+             # 1. Using the previous solution for making r (without using V[c - 1]).
+             # 2. Using the previous solution for making r - V[c - 1] (without using V[c - 1])
              # plus this 1 extra coin.
             
 			else:
@@ -70,7 +68,7 @@ def change_making(V, S):
 
 
 
-V = [2]
+V = [2,4]
 S = 6
 
 test = change_making(V, S)
