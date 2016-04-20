@@ -1,6 +1,11 @@
 """ 
 playground for dynamic programming, number of coin combinations for sum S  
 
+Problema:
+Data un insieme di monete V1,...,Vm e un valore S. 
+Determinare il numero di combinazione possibile per pagare 
+una somma S senza dare il resto. Utilizzare la programmazione dinamica.
+
 Modified by Tong Liu
 
 ref: http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/ 

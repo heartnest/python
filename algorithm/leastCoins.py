@@ -1,5 +1,10 @@
 """ playground for dynamic programming, coin making problem 
 
+Problema:
+Data un insieme di valori di monete V1,...,Vm e un valore S. 
+Determinare il numero minimo di monete necessarie per pagare una somma S. 
+Utilizzare la programmazione dinamica
+
 Modified by Tong Liu
 
 ref: https://en.wikipedia.org/wiki/Change-making_problem """
