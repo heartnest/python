@@ -22,6 +22,7 @@ Problema:
    Quindi il valore da restituire e' 200, che e' il minimo fra i due totali.
 
 
+Created by: Tong Liu
 """
 
 
@@ -33,8 +34,6 @@ def salvadanaio(P,V,t,i,M):
         return 99999999
     if t == 0:
         return 0
-
-    M = [[None for x in range(t+1)] for y in range(i+1)] 
 
     # value made with the first 'i' coins which weight 't' totally
     if M[i][t] is None:
@@ -48,11 +47,11 @@ def salvadanaio(P,V,t,i,M):
  
 
 # Main
-P = [0,10,50]
-V = [0,50,200]
+P = [0,50,10]
+V = [0,200,50]
 t = 50
 i = 2
-M = None
+M = [[None for x in range(t+1)] for y in range(i+1)] 
 
 res = salvadanaio(P,V,t,i,M)
 print '--------------------'

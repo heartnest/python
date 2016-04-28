@@ -15,7 +15,7 @@ def printMatrix(V,testMatrix):
 	print "----------------------"
 	for i, row in enumerate(testMatrix):
 		if i-1 >=0:
-			print V[i-1],'  '.join([str(y) for y in row])
+			print V[i-1],' '.join([str(y) for y in row])
 		else:
 			print ' ',' '.join([str(y) for y in row])
 		
@@ -26,8 +26,8 @@ def _get_change_making_matrix(V, S):
 	T = [[0 for _ in range(S + 1)] for _ in range(len(V) + 1)]
 	
 	for i in range(S + 1):
-		T[0][i] =  float("inf") #c orrect version
-		# m[0][i] =  i # illustration purpose
+		# T[0][i] =  float("inf") #correct version
+		T[0][i] =  i # illustration purpose
 	print T
 	return T
   
@@ -72,8 +72,8 @@ def change_making(V, S):
 
 
 
-V = [2,4]
-S = 6
+V = [2,3,6,11]
+S = 8
 
 test = change_making(V, S)
 

@@ -49,9 +49,9 @@ def countSolutions(V, n, S):
  
 
 # Main
-V = [3,2,1]
+V = [2,3,6,11]
 n = len(V)
-S = 3
+S = 8
 
 res = countSolutions(V, n, S)
 print 'Final result: ',res

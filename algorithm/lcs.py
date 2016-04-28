@@ -2,10 +2,10 @@
 [17/2/2015] Siano date due stringhe P = p1p2...pm e 
 T = t1t2...tn di caratteri alfabetici. 
 Si progetti un algoritmo di "programmazione dinamica" 
-per individuare la più lunga sottosequenza
+per individuare la piu lunga sottosequenza
 comune tra P e T (per esempio, 
 se P = 9,15,3,6,4,2,5,10,3 e T = 8,15,6,7,9,2,11,3,1 
-allora il risultato è: 15, 6, 2, 3).
+allora il risultato e: 15, 6, 2, 3).
 
 original ref: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Longest_common_subsequence
 modified by Tong
