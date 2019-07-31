@@ -1,7 +1,8 @@
 import glob
 import sys
-
+import os 
 testFile = "test.txt"
+
 
 with open(testFile) as ff:
 	for line in ff:
@@ -14,6 +15,11 @@ with open(testFile) as ff:
 with open(smart_conf, 'r') as f:
       first_line = f.readline()
 
+# read csv
+with open('components.csv') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+    	print(row)
 
       
 # over write, create if not exist
@@ -29,6 +35,9 @@ with open(testFile, 'a+') as outfile:
 with open(testFile, 'r') as content_file:
     content = content_file.read()
 
+# delete a file
+os.remove("ChangedFile.csv") 
+
 # json
 
 with open('../../generator/data/types.json') as filejson:
@@ -37,6 +46,16 @@ with open('../../generator/data/types.json') as filejson:
 
 with open(preferenjson, 'w') as outfile:
     json.dump(arr, outfile)
+
+with open(preferenjson, 'w') as outfile:
+    json.dump(arr, outfile)
+    json.dump(output, twitter_data_file, indent=4, sort_keys=True)
+    
+
+
+# json string
+json_string = json.dumps(row)
+json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4, separators=(',', ': '))
 
 
 if len(sys.argv) == 1:

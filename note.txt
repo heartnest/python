@@ -1,0 +1,18 @@
+## Usage of vi.
+
+Set line number.
+- Press : (the colon). The cursor should reappear at the lower left corner of the screen next to a : prompt.
+- Enter the following command: set number.
+
+Find a string.
+To find a character string, type / followed by the string you want to search for, and then press Return. vi positions the cursor at the next occurrence of the string. For example, to find the string “meta,” type /meta followed by Return. Type n to go to the next occurrence of the string.
+
+
+
+## Apache 
+
+ - sudo apachectl start
+ - sudo apachectl restart
+
+Troubleshoot Apache configuration
+ - apachectl configtest
