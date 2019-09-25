@@ -22,6 +22,8 @@ def printStr():
 
 printStr()
 
+# check if str is a int (number)
+str.isdigit()
 
 # str contains
 if "blah" not in "yaoooblah": 

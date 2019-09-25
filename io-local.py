@@ -49,7 +49,7 @@ with open(preferenjson, 'w') as outfile:
 
 with open(preferenjson, 'w') as outfile:
     json.dump(arr, outfile)
-    json.dump(output, outfile, indent=4, sort_keys=True)
+    json.dump(output, twitter_data_file, indent=4, sort_keys=True)
     
 
 
@@ -85,21 +85,4 @@ root_arr = os.path.realpath(__file__).split('/')[:-1]
 print root_arr,'as file directory path'
 
 
-
-
-def json2csv(filename):
-	"""
-	Conversion from Scrapy JSON to CSV
-	"""
-	with open(filename) as filejson:
-		raw = json.load(filejson)
-
-	keys = raw[0].keys()
-
-	outfile = filename.split('.json')[0]+'.csv'
-	with open(outfile, 'w') as outfile:
-		out = "output"
-		outfile.write(';'.join(keys)+"\n")
-		for x in raw:
-			arr = [x[y] for y in keys]
-			outfile.write(';'.join(arr)+"\n")
+    
